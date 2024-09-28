@@ -1,14 +1,25 @@
 from flask import Flask, render_template, request
-import joblib
-frapp = Flask(__name__)
+import joblib,os
 
-# Load the trained model and vectorizer
-model = joblib.load('model/spam_model.pkl')  # Adjust the path as necessary
-vectorizer = joblib.load('model/vectorizer.pkl')
+app = Flask(__name__) 
 
-# Preprocessing function (you may want to include the one you use for training)
+@app.route('/',methods=['GET'])  
+def homePage():
+    return render_template("index.html")
+
+@app.route('/train',methods=['GET'])  
+def training():
+    os.system("python main.py")
+    return "Training Successful!"
+
+
+
+model = joblib.load('artifacts/model_train/model.joblib') 
+vectorizer = joblib.load('artifacts/model_train/vector.joblib')
+
+
 def preprocess(content):
-    # Basic preprocessing, similar to the one used during training
+    
     import re
     from nltk.stem import PorterStemmer
     stemmer = PorterStemmer()

@@ -1,9 +1,10 @@
 from flask import Flask, render_template, request
 import joblib
-frapp = Flask(__name__)
+
+app = Flask(__name__)
 
 # Load the trained model and vectorizer
-model = joblib.load('model/spam_model.pkl')  # Adjust the path as necessary
+model = joblib.load('arti/spam_model.pkl')  # Adjust the path as necessary
 vectorizer = joblib.load('model/vectorizer.pkl')
 
 # Preprocessing function (you may want to include the one you use for training)
