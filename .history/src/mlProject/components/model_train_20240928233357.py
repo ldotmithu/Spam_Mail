@@ -6,8 +6,6 @@ from nltk.corpus import stopwords
 from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk.stem import PorterStemmer
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.metrics import accuracy_score
-
 
 class ModelTrain:
     def __init__(self,config:ModelTrainconfig):
@@ -50,9 +48,6 @@ class ModelTrain:
         
         joblib.dump(model,self.config.model_path)
         joblib.dump(vector,self.config.vector_path)
-        
-        prd=model.predict(X_train)
-        logging.info(accuracy_score(y_train,prd))
         
         
         

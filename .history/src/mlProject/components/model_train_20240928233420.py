@@ -51,9 +51,6 @@ class ModelTrain:
         joblib.dump(model,self.config.model_path)
         joblib.dump(vector,self.config.vector_path)
         
-        prd=model.predict(X_train)
-        logging.info(accuracy_score(y_train,prd))
-        
         
         
         
