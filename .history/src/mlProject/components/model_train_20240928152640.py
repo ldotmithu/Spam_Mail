@@ -19,7 +19,7 @@ class ModelTrain:
         st_content=re.sub('\s+',' ',st_content)
         st_content=st_content.lower()
         st_content=st_content.split()
-        st_content=[self.poter.stem(word)for word in st_content]
+        st_content=[ self.poter.stem(word)for word in st_content]
         
         return ' '.join(st_content)
         
@@ -31,13 +31,13 @@ class ModelTrain:
         
         traget_col='spam'
         
-        X_train=train_data['text']
+        X_train=train_data.drop(traget_col,axis=1)
         y_train=train_data[traget_col]
-        X_test=test_data['text']
+        X_test=test_data.drop(traget_col,axis=1)
         y_test=test_data[traget_col]
         
-        X_train=X_train.apply(self.preprocess)
-        X_test=X_test.apply(self.preprocess)
+        X_train=self.preprocess(X_train)  
+        X_test=self.preprocess(X_test)  
    
         vector=TfidfVectorizer()
         X_train=vector.fit_transform(X_train)

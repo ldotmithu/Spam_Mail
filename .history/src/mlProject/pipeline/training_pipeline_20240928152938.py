@@ -24,13 +24,3 @@ class DataTrnsfomationPipeline:
         data_transfomation_config=config.get_data_transfomatio_config()
         data_transomation=DataTransfomation(config=data_transfomation_config)
         data_transomation.split()
-        
-class ModelTrainPipeline:
-    def __init__(self) -> None:
-        pass
-    
-    def main(self):
-        config=ConfigurationManager()
-        model_train_config=config.get_model_train_config()
-        model_train=ModelTrain(config=model_train_config)
-        model_train.model_set()        

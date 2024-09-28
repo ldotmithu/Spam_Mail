@@ -31,9 +31,9 @@ class ModelTrain:
         
         traget_col='spam'
         
-        X_train=train_data['text']
+        X_train=train_data.drop(columns=traget_col,axis=1)
         y_train=train_data[traget_col]
-        X_test=test_data['text']
+        X_test=test_data.drop(columns=traget_col,axis=1)
         y_test=test_data[traget_col]
         
         X_train=X_train.apply(self.preprocess)
