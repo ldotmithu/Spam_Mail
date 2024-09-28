@@ -27,23 +27,4 @@ class ConfigurationManager:
         
         create_directories([config.root_dir])
         
-        data_transfomation_config=DataTransfomationConfig(
-            root_dir=config.root_dir,
-            data_path=config.data_path
-        )
-        return data_transfomation_config
-    
-    def get_model_train_config(self):
-        config=self.config.model_train
         
-        create_directories([config.root_dir])
-        
-        model_train_config=ModelTrainconfig(
-            root_dir=config.root_dir,
-            train_data_path=config.train_data_path,
-            test_data_path=config.test_data_path,
-            model_path=config.model_path,
-            vector_path=config.vector_path,
-            preprocess_path=config.preprocess_path
-        )
-        return model_train_config

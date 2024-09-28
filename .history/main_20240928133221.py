@@ -2,8 +2,6 @@ from src.mlProject.pipeline.training_pipeline import (DataIngestionPipeline,
                                                       DataTrnsfomationPipeline,)
 from mlProject import logging
 
-
-
 Stage_Name='Data Ingestion '
 try:
     data_ingestion=DataIngestionPipeline()
@@ -13,14 +11,3 @@ try:
 except Exception as e:
     logging.exception(e)
     raise e     
-
-
-Stage_Name='Data Transfomation '
-try:
-    data_transomation=DataTrnsfomationPipeline()
-    data_transomation.main()
-    logging.info(f'{Stage_Name} completed')
-    print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
-except Exception as e:
-    logging.exception(e)
-    raise e    

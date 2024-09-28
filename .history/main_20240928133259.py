@@ -14,7 +14,6 @@ except Exception as e:
     logging.exception(e)
     raise e     
 
-
 Stage_Name='Data Transfomation '
 try:
     data_transomation=DataTrnsfomationPipeline()

@@ -20,4 +20,3 @@ class ModelTrainconfig:
     test_data_path:Path
     model_path:Path
     vector_path:Path    
-    preprocess_path:Path

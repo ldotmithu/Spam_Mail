@@ -16,4 +16,3 @@ model_train:
   test_data_path: artifacts\data_transfomation\test.csv
   model_path: artifacts/model_train/model.joblib
   vector_path: artifacts/model_train/vector.joblib
-  preprocess_path: artifacts/model_train/preprocess.joblib

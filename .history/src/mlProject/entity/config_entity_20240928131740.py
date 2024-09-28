@@ -13,11 +13,3 @@ class DataTransfomationConfig:
     root_dir:Path
     data_path:Path    
     
-@dataclass
-class ModelTrainconfig:
-    root_dir:Path
-    train_data_path:Path
-    test_data_path:Path
-    model_path:Path
-    vector_path:Path    
-    preprocess_path:Path
