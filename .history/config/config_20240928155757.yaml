@@ -22,4 +22,4 @@ model_evaluation:
   test_data_path: artifacts\data_transfomation\test.csv
   model_path: artifacts/model_train/model.joblib
   vector_path: artifacts/model_train/vector.joblib
-  metrics_path: artifacts/model_evaluation/metrics.json
+  metrics_path: metrics.json

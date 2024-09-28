@@ -20,6 +20,7 @@ class ModelTrainconfig:
     test_data_path:Path
     model_path:Path
     vector_path:Path    
+    preprocess_path:Path
     
 @dataclass
 class ModelEvaluationConfig:
@@ -27,4 +28,4 @@ class ModelEvaluationConfig:
     test_data_path:Path
     model_path:Path
     vector_path:Path 
-    metrics_path:Path   
+    metrics_path:str   

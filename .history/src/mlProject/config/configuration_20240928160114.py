@@ -43,7 +43,8 @@ class ConfigurationManager:
             train_data_path=config.train_data_path,
             test_data_path=config.test_data_path,
             model_path=config.model_path,
-            vector_path=config.vector_path
+            vector_path=config.vector_path,
+            preprocess_path=config.preprocess_path
         )
         return model_train_config
     
@@ -59,4 +60,3 @@ class ConfigurationManager:
             vector_path=config.vector_path,
             metrics_path=config.metrics_path
         )
-        return model_evaluation_config

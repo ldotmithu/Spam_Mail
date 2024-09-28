@@ -37,13 +37,3 @@ try:
 except Exception as e:
     logging.exception(e)
     raise e    
-
-Stage_Name='Model Evaluation  '
-try:
-    model_evaluation=ModelEvaluationPipeline()
-    model_evaluation.main()
-    logging.info(f'{Stage_Name} completed')
-    print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
-except Exception as e:
-    logging.exception(e)
-    raise e

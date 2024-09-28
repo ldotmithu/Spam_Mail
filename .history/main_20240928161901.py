@@ -40,8 +40,8 @@ except Exception as e:
 
 Stage_Name='Model Evaluation  '
 try:
-    model_evaluation=ModelEvaluationPipeline()
-    model_evaluation.main()
+    model_train=ModelTrainPipeline()
+    model_train.main()
     logging.info(f'{Stage_Name} completed')
     print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
 except Exception as e:

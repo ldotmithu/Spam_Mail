@@ -44,6 +44,6 @@ class ModelEvaluationPipeline:
         config=ConfigurationManager()
         model_evaluation_config=config.get_model_evaliation_config()
         model_evaluation=ModelEvaluation(config=model_evaluation_config)
-        model_evaluation.evaluation()     
+        model_evaluation.evaluatoon()     
         
                   
